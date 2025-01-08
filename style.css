@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    font-size: clamp(1rem, 10vw, 2rem);
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+}
+
+img{
+    width: 80%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.flags{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr 1fr);
+    grid-template-rows: auto;
+    gap: 0.3rem;
+}
+
+.head{
+    width: 100vh;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20rem;
+}
+#country{
+    padding: 1rem;
+    font-size: 1rem;
+}
+#kezd-btn{
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    background-color: lightgreen;
+    font-weight: 700;
+}
+#kezd-btn:hover{
+    background-color: rgb(207, 244, 207);
+}

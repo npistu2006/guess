@@ -1,0 +1,12 @@
+-**Betöltéskor**
+    - AJAX kérés --> data
+    - getFlags
+    - renderFlags
+    - **Gombra kattintásnál**
+      - flagAction
+      - getNames (Csökken a kiválasztott nevekkel)
+      - nameToGuess
+      - validation
+      - getNames (amint válaszolunk, újabb nevet ad)
+      - (Számolja a helyes és helytelen válaszokat)
+      - (Adott idő alatt kell teljesíteni)
