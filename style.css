@@ -1,58 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
+body{
+    background-color: rgb(52, 132, 155);
 }
-
 header{
-    font-size: clamp(1rem, 10vw, 2rem);
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: bisque;
+    padding: 1rem;
+    font-size: clamp(1rem, 10vw, 2em);
+    font-weight: 700;
+    text-align: center;
+    background-color: rgb(89, 209, 242);
 }
-
 img{
-    width: 80%;
+    width: 90%;
     aspect-ratio: 2/1;
     object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
 }
 .container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
+    flex-direction: column;
+    gap: 1rem;
+    width: 95%;
     margin: 0 auto;
+    padding: 1rem;
+}
+section{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 1.5rem 0;
+}
+section input{
+    border: none;
+    font-size: 1.4rem;
+    padding: .2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+[type='button']{
+    background-color: rgb(162, 240, 185);
+    transition: scale .1s;
+}
+[type='button']:hover{
+    background-color: rgb(89, 209, 242);
+    cursor: pointer;
+}
+[type='button']:active{
+    scale:.95;
 }
 .flags{
     display: grid;
-    grid-template-columns: repeat(5, 1fr 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    gap: 0.3rem;
+    column-gap: .3rem;
+    row-gap: 1rem;
+}
+.flags div{
+    display: flex;
+    justify-content: center;
+    transition: scale .2s;
+}
+/*Az osztálynevet js-sel add hozzá!*/
+.flag:hover{
+    scale: 1.05;
 }
 
-.head{
-    width: 100vh;
-    height: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:20rem;
+@media (max-width: 700px) {
+    .flags{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+    }    
 }
-#country{
-    padding: 1rem;
-    font-size: 1rem;
-}
-#kezd-btn{
-    padding: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    background-color: lightgreen;
-    font-weight: 700;
-}
-#kezd-btn:hover{
-    background-color: rgb(207, 244, 207);
+
+@media (max-width: 600px) {
+    .flags{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+    }    
 }
